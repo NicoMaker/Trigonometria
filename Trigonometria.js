@@ -23,7 +23,7 @@ function CalcolaTrigonometria() {
 }
 
 function Inserisci() {
-    let gradi = parseInt(document.getElementById("gradi-radianti").value);
+    let gradi = parseFloat(document.getElementById("gradi-radianti").value);
     return gradi;
 }
 
