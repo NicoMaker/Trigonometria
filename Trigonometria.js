@@ -22,33 +22,21 @@ function CalcolaTrigonometria() {
     }
 }
 
-function Inserisci() {
-    let gradi = parseFloat(document.getElementById("gradi-radianti").value);
-    return gradi;
-}
+let Inserisci = () => parseFloat(document.getElementById("gradi-radianti").value);
 
-function Radianti(gradi) {
-    let gradorad = (gradi * Math.PI) / 180;
-    return gradorad;
-}
+let Radianti = (gradi) => (gradi * Math.PI) / 180;
 
-function Gradi(gradi) {
-    let gradograd = (gradi * 180) / Math.PI;
-    return gradograd;
-}
+let Gradi = (gradi) => (gradi * 180) / Math.PI;
 
 function Risultato(info, gradi) {
-    let stampaHTML = "", cos = 0, sen = 0, tan = 0, arcsen = 0, arccos = 0, arctan = 0;
+    let stampaHTML = "";
 
-    sen = Math.sin(gradi);
-    cos = Math.cos(gradi);
-    tan = Math.tan(gradi);
-    arcsen = Math.asin(gradi);
-    arccos = Math.acos(gradi);
-    arctan = Math.atan(gradi);
-
-    if (info == "Gradi")
-        gradi = Gradi(gradi);
+    let sen = Math.sin(gradi);
+    let cos = Math.cos(gradi);
+    let tan = Math.tan(gradi);
+    let arcsen = Math.asin(gradi);
+    let arccos = Math.acos(gradi);
+    let arctan = Math.atan(gradi);
 
     stampaHTML += "Dati del calcolo di " + gradi + " " + info;
     stampaHTML += "<br>";
