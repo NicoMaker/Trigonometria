@@ -38,6 +38,9 @@ function Risultato(info, gradi) {
     let arccos = Math.acos(gradi);
     let arctan = Math.atan(gradi);
 
+    if (info == "Gradi")
+        gradi = Gradi(gradi)
+
     stampaHTML += "Dati del calcolo di " + gradi + " " + info;
     stampaHTML += "<br>";
     stampaHTML += "<br>";
